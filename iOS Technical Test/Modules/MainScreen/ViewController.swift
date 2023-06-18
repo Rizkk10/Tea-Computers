@@ -17,6 +17,7 @@ class ViewController: UIViewController , UICollectionViewDelegate , UICollection
     
 
     
+    @IBOutlet weak var repoCollection: UICollectionView!
     var viewModel: ViewModel!
     
     override func viewDidLoad() {
@@ -32,20 +33,20 @@ class ViewController: UIViewController , UICollectionViewDelegate , UICollection
     }
     
     func renderCollection() {
-        //self.productCollection.reloadData()
+        self.repoCollection.reloadData()
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.repositories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MainCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
         
-        let product = viewModel.repositories[indexPath.item]
-        //cell.configCell(product: product.Product)
+        let repo = viewModel.repositories[indexPath.item]
+        cell.configCell(repo: repo)
         
         
-        //return cell
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

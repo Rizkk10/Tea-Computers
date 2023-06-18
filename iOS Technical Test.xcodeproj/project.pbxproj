@@ -17,6 +17,7 @@
 		F0C6AF002A3E6CFF00F7997B /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C6AEFF2A3E6CFF00F7997B /* DataModel.swift */; };
 		F0C6AF022A3E6D1000F7997B /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C6AF012A3E6D1000F7997B /* NetworkManger.swift */; };
 		F0C6AF042A3E6D2A00F7997B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C6AF032A3E6D2A00F7997B /* ViewModel.swift */; };
+		F0C6AF062A3E70B700F7997B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C6AF052A3E70B700F7997B /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F0C6AEFF2A3E6CFF00F7997B /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		F0C6AF012A3E6D1000F7997B /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
 		F0C6AF032A3E6D2A00F7997B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		F0C6AF052A3E70B700F7997B /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				F0C6AEE32A3E670B00F7997B /* ViewController.swift */,
+				F0C6AF052A3E70B700F7997B /* CollectionViewCell.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			files = (
 				F0C6AF022A3E6D1000F7997B /* NetworkManger.swift in Sources */,
 				F0C6AF002A3E6CFF00F7997B /* DataModel.swift in Sources */,
+				F0C6AF062A3E70B700F7997B /* CollectionViewCell.swift in Sources */,
 				F0C6AEE42A3E670B00F7997B /* ViewController.swift in Sources */,
 				F0C6AEE02A3E670B00F7997B /* AppDelegate.swift in Sources */,
 				F0C6AEE22A3E670B00F7997B /* SceneDelegate.swift in Sources */,
