@@ -13,9 +13,7 @@ protocol MainViewProtocol : AnyObject {
 }
 
 
-class ViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout , MainViewProtocol {
-    
-
+class ViewController: UIViewController  {
     
     @IBOutlet weak var repoCollection: UICollectionView!
     var viewModel: ViewModel!
@@ -30,11 +28,13 @@ class ViewController: UIViewController , UICollectionViewDelegate , UICollection
             }
         }
         viewModel.getRepositories()
+        
     }
+
+}
+
+extension ViewController : UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
     
-    func renderCollection() {
-        self.repoCollection.reloadData()
-    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.repositories.count
     }
@@ -51,20 +51,23 @@ class ViewController: UIViewController , UICollectionViewDelegate , UICollection
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.width / 2 - 10
-        let height = collectionView.bounds.height / 2 - 10
+        let height = collectionView.bounds.height / 3.8
         return CGSize(width: width, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 4
     }
 }
 
 
-
-
-
+extension ViewController : MainViewProtocol {
+    
+    func renderCollection() {
+        self.repoCollection.reloadData()
+    }
+}
